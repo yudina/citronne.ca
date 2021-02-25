@@ -1,0 +1,235 @@
+/* css */
+/* global */
+
+body{
+  display:flex;
+  min-height:100vh;
+  margin:0;
+  background-color:#333;
+  font-family: 'Nunito Sans', sans-serif;
+  color:white;
+  font-size:18px; 
+  line-height: 1.6;
+}
+main, nav, aside {
+  position: relative;
+}
+main{
+  flex:1;
+  display:flex;
+  overflow: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+}
+h1{
+  font-size:52px;
+  line-height: 1.2;
+
+}
+h2{
+  font-size:24px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+h3{
+  font-size:16px;
+  font-weight: 400;
+  color:#ED5E35;
+}
+h4{
+  font-size:24px;
+  font-weight: 400;
+  margin-bottom:1em;
+}
+
+/* aside */
+
+.aside__logo{
+  color:#E0CD62;
+  padding:1em;
+}
+.aside__social{
+  padding:1em;
+  position: absolute;
+  bottom:0;
+}
+.aside__social span{
+  display:inline-block;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  text-orientation: sideways-right;
+  width:100%;
+  text-align: center;
+  font-size:18px;
+}
+.aside__social ul{
+  padding:0;
+}
+.aside__social ul li{
+  list-style: none;
+  margin:1em 0;
+}
+.aside__social ul li a{
+  color:#ED5E35;
+  transition:all .5s ease;
+}
+.aside__social ul li a:hover{
+  color:white;
+  transition:all .5s ease;
+}
+
+/* main */
+
+.profile {
+  overflow: hidden;
+  height:100vh;
+  position: relative;
+  flex:1;
+  width:600px;
+  background-image: url('../assets/profilepic.jpg');
+  background-position: center;
+  background-size:cover;
+}
+.profile__text{
+  position: absolute;
+  width:100%;
+  text-align:center;
+  top:50px;
+}
+.about{
+  flex:2;
+  overflow-y: scroll;
+  height:100vh;
+  margin-right:-50px;
+  padding-right:50px;
+}
+.about__description, .about__CV{
+  padding:1em 5em;
+}
+.about__CV--grid{
+  display:flex;
+}
+.about__CV--grid div{
+  flex:1;
+  padding:1em 0;
+}
+.about__CV--grid h4{
+  display: inline;
+  margin-left:1em;
+}
+.about__CV--grid svg{
+  color:orangered;
+}
+.about__CV--grid ul{
+  padding:0;
+}
+.about__CV--grid ul li{
+  list-style: none;
+}
+
+.mobile__social{
+  display:none;
+}
+footer{
+  padding:1em 5em;
+}
+footer ul{
+  padding:0;
+}
+footer ul li{
+  list-style: none;
+}
+footer p{
+  margin:0;
+  font-size:12px;
+}
+
+.heart_container{
+  position:fixed;
+  bottom:10px;
+  right:25px;
+}
+
+#result{
+  display:inline;
+}
+
+.heart {
+  background-color: transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  color:white;
+}
+
+.heart:hover,
+.heart.pressed{
+  color: red;
+  transition: all .5s ease;
+  outline:none;
+}
+
+/* nav */
+
+.nav__hamburger{
+  padding:1em;
+  cursor: pointer;
+  transition: all .5s ease;
+  background: transparent;
+  color:white;
+}
+.nav__hamburger:hover,
+.nav__hamburger.active{
+  background-color:orangered;
+  color:#333;
+  transition: all .5s ease;
+}
+
+.nav__hamburger:hover img, .nav__hamburger.active img{
+  transition: all .5s ease;
+color:#333;
+}
+.nav__hidden{
+  position:fixed;
+  top:50%;
+  right:0;
+  display:none;
+}
+.nav__hidden ul{
+  margin:0;
+}
+.nav__hidden ul li{
+  list-style:none;
+  padding:1em;
+  transition: all .5s ease;
+  cursor:pointer;
+}
+.nav__hidden ul li:hover{
+  background-color:orangered;
+  transition: all .5s ease;
+}
+.nav__hidden ul li a{
+  color:white;
+  transition:all .5s ease;
+}
+.nav__hidden ul li:hover a{
+  color:#333;
+  transition:all .5s ease;
+}
+.nav__hidden ul li span{
+  position: absolute;
+  right:1em;
+  width:100%;
+  opacity:0;
+  transition: all .5s ease;
+  margin-top: 5px;
+}
+.nav__hidden ul li:hover span{
+  right:4em;
+  width:100%;
+  opacity:1;
+  transition: all .5s ease;
+}

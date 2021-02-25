@@ -1,0 +1,67 @@
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media only screen and (max-width: 1024px) {
+  
+    main{
+        flex-direction: column;
+    }
+    .profile{
+        width:100%;
+        flex:none;
+    }
+    .about__description, .about__CV, footer{
+        padding:1em;
+    }
+    .heart_container{
+      position:absolute;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+      body, .about__CV--grid{
+        flex-direction: column-reverse;
+      }
+    .aside{
+        display:none;
+    }
+    .nav__hamburger{
+        position: absolute;
+        top:0;
+        right:0;
+    }
+    .nav__hidden ul li:hover{
+        background-color:transparent;
+        transition: all .5s ease;
+      }
+      .nav__hidden ul li:hover a{
+        color:#333;
+        transition:all .5s ease;
+      }
+      .nav__hidden ul li:hover span{
+          right:3em;
+      }
+      .nav__hidden{
+          position: absolute;
+          transform:translate(0,40%);
+          height:100vh;
+      }
+      .mobile__social{
+          display:block;
+      }
+      .mobile__social ul li{
+          display: inline-block;
+          margin-right: 1em;
+      }
+      .mobile__social ul li a{
+        color:#ED5E35;
+        transition:all .5s ease;
+      }
+      .mobile__social ul li a:hover{
+        color:white;
+        transition:all .5s ease;
+      }
+  }
+  
